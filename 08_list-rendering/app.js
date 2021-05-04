@@ -3,7 +3,28 @@ const numbers = [1, 2, 3, 4, 5];
 const doubled = numbers.map((number) => number * 2);
 
 function List(){
-  /* // TODO
+  const [list, setList] = React.useState(['學會 JS', '學會React', '月薪十萬']); 
+  const atAddClick = () => {
+  
+  }
+  return (
+    <div>
+      <button onClick={atAddClick}>Add</button>
+      <ol className="list">
+        {
+          list.map(function (text) {
+            return <li key={text}> {text} </li>
+          })
+        }
+      </ol>
+    </div>
+  )
+
+
+
+  /* // TODO 
+
+
   const [list, setList] = React.useState(['學會 JS', '學會 React', '年薪百萬']);
   const atAddClick = () => {
     var newList = list.concat(new Date().toString());
@@ -21,6 +42,9 @@ function List(){
       </ol>
     </div>
   )
+
+  用迴圈產生 component 
+
   // */
 }
 
