@@ -1,18 +1,47 @@
 
 
 function CategoryItem(props){
-  /* // TODO1
   return (
     <div className="category-item">
       <img src={props.image} />
       <p>{props.name}</p>
     </div>
   )
-  // */
+  
 }
 
 function List(){
   const [list, setList] = React.useState([]);
+  React.useEffect(() => {
+    fetch('./categories.json')
+    .then((res) => res.json())
+    .then((categories) => {
+      console.log(categories); 
+      setList(categories);
+    })
+  }, []);
+  
+  return (
+    <div>
+      <div className="category-wrap"> 
+      {
+        list.map((category) => {
+          return (
+            <CategoryItem
+            key={category.id} 
+            name={category.name}
+            image={category.image}
+
+            />
+          )
+
+        })
+      }
+
+
+      </div>
+    </div>
+  )
 
   /* // TODO2
   React.useEffect(() => {
@@ -31,7 +60,7 @@ function List(){
         list.map((category)=> {
           return (
             <CategoryItem 
-              key={category.id}
+              key={category.id} key值不會傳到props，key必須存在
               name={category.name}
               image={category.image} />
           )

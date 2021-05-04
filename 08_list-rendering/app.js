@@ -5,8 +5,10 @@ const doubled = numbers.map((number) => number * 2);
 function List(){
   const [list, setList] = React.useState(['學會 JS', '學會React', '月薪十萬']); 
   const atAddClick = () => {
-    list.push()
-  
+    list.push(new Date().toString()); 
+    setList(list); 
+    console.log(list); 
+    var newList = List.concat(new Date().toString()); 
   }
   return (
     <div>

@@ -26,6 +26,7 @@ function UseRefExample(){
     <div className="ref-example-component">
       <section>
         <button onClick={atShowClick}>show input</button>
+        
         <button onClick={()=> setCount(count+1)}>+1</button>
         {
           show && <input ref={refInput} />
