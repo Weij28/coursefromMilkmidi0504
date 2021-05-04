@@ -1,6 +1,6 @@
 
 function TodoItem(props) {
-  /* // TODO
+
   const onClick = () => {
     props.onToggleItem(props.id);
   };
@@ -15,5 +15,5 @@ function TodoItem(props) {
       </li>
     </section>
   );
-  // */
+
 }

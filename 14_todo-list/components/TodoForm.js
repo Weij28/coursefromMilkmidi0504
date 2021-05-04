@@ -1,6 +1,5 @@
 function TodoForm(props) {
   const inputRef = React.useRef();
-  /* // TODO
 
   const atSubmit = (e) => {
     e.preventDefault();
@@ -19,5 +18,5 @@ function TodoForm(props) {
       </form>
     </section>
   );
-  // */
+
 }

@@ -6,7 +6,7 @@ const initialList = [
 function TodoList() {
   const [list, setList] = React.useState(initialList);
 
-  /* // TODO 1 start
+
   const atAddItem = (text) => {
     const item = {
       id: new Date().getTime().toString(),
@@ -29,9 +29,7 @@ function TodoList() {
     });
     setList(newList);
   };
-  // */ // TODO 1 end
 
-  /* // TODO 2 start
   return (
     <section className="todo-list" data-name="TodoList.js">
       <TodoForm onAddItem={atAddItem} />
