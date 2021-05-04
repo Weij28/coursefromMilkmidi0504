@@ -5,6 +5,7 @@ const doubled = numbers.map((number) => number * 2);
 function List(){
   const [list, setList] = React.useState(['學會 JS', '學會React', '月薪十萬']); 
   const atAddClick = () => {
+    list.push()
   
   }
   return (
@@ -42,6 +43,7 @@ function List(){
       </ol>
     </div>
   )
+傳一個數值跟傳一個記憶體空間是不一樣的概念
 
   用迴圈產生 component 
 
