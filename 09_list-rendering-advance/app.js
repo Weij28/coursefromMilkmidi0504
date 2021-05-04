@@ -12,6 +12,7 @@ function CategoryItem(props){
 
 function List(){
   const [list, setList] = React.useState([]);
+  
   React.useEffect(() => {
     fetch('./categories.json')
     .then((res) => res.json())

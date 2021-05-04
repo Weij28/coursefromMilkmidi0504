@@ -2,6 +2,9 @@ function UseRefExample(){
   const [count, setCount] = React.useState(0);
   const [show, setShow] = React.useState(false);
 
+
+
+
   /* // TODO
   const refInput = React.useRef();
 
@@ -21,15 +24,17 @@ function UseRefExample(){
     }
   }, [show]);
 
+  React.useEffect這個方法會生出新的物件來
+  
   
   return (
     <div className="ref-example-component">
       <section>
         <button onClick={atShowClick}>show input</button>
-        
+
         <button onClick={()=> setCount(count+1)}>+1</button>
         {
-          show && <input ref={refInput} />
+          show && <input ref={refInput} /> useEffect都使用在動元素上面
         }
       </section>
     </div>
